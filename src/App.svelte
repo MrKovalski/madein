@@ -10,10 +10,10 @@
 		let zo = cbe.map(el => el.barcode);
 		let zoi = zo.indexOf(barcode)
 		
-		if(zoi !== NaN){
-			zemljaText = cbe[zoi].country;
+		if(barcode.toString().length === 3){
+			zemljaText = barcode.toString().length;
 		} else{
-			zemljaText = "Neutvrđeno";
+			zemljaText = "Unesi tri broja";
 		}
 	}
 </script>
@@ -60,12 +60,15 @@ h3 {
 #zemlja-text{
 	background-color: rgb(160, 235, 160);
 	padding: 0.5em 1em;
-	font-size: 3em;
+	font-size: 2em;
 	width: 50%;
 	margin-bottom: 1em;
 	text-align: center;
 	text-transform: uppercase;
+	font-weight: 600;
 }
+
+
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
