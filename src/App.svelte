@@ -11,7 +11,7 @@
 		let zoi = zo.indexOf(barcode)
 		
 		if(barcode.toString().length === 3){
-			zemljaText = barcode.toString().length;
+			zemljaText = cbe[zoi].country;
 		} else{
 			zemljaText = "Unesi tri broja";
 		}
